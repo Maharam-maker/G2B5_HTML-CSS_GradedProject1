@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Pharmacy</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Medicines</a>
+                <ul>
+                    <li><a href="#">Fever</a></li>
+                    <li><a href="#">Muscle Pains</a></li>
+                    <li><a href="#">Cold & Cough</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Health Care</a>
+                <ul>
+                    <li><a href="#">Baby Care</a></li>
+                    <li><a href="#">Skin Care</a></li>
+                    <li><a href="#">Home Care</a></li>
+                    <li><a href="#">Personal Care</a></li>
+                    <li><a href="#">Pet Care</a></li>
+                </ul>
+            </li>
+            <li><a href="#lab-test">Lab Test</a></li>
+        </ul>
+    </nav>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="ani1.jpg" alt="Slide 1">
+        </div>
+        <div class="mySlides">
+            <img src="ani2.png" alt="Slide 2">
+        </div>
+        <div class="mySlides">
+            <img src="ani3.jpg" alt="Slide 3">
+        </div>
+        <div class="mySlides">
+            <img src="ani4.jpg" alt="Slide 3">
+        </div>
+        <div class="mySlides">
+            <img src="ani5.jpg" alt="Slide 3">
+        </div>
+    </div>
+
+    <main>
+        <div class="products-section">
+            <h2>Covid Care</h2>
+            <div class="product">
+                <img src="c1.jpg" alt="Product 1">
+                <div class="product-name">Covid Test Kit</div>
+                <div class="product-price">Rs 40</div>
+                <div class="product-offer-price">Offer Rs.30</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="c2.jpg" alt="Product 2">
+                <div class="product-name">Covid Essentials</div>
+                <div class="product-price">Rs 240</div>
+                <div class="product-offer-price">Offer Rs.170</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="c3.jpg" alt="Product 2">
+                <div class="product-name">Sanitizer Bottle</div>
+                <div class="product-price">Rs 99</div>
+                <div class="product-offer-price">Offer Rs.87</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="c4.jpg" alt="Product 2">
+                <div class="product-name">Mask</div>
+                <div class="product-price">Rs 45</div>
+                <div class="product-offer-price">Offer Rs.30</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="products-section">
+            <h2>Diabetes Care</h2>
+            <div class="product">
+                <img src="d1.jpg" alt="Product 1">
+                <div class="product-name">Tablets</div>
+                <div class="product-price">Rs 400</div>
+                <div class="product-offer-price">Offer Rs.350</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="d2.jpg" alt="Product 2">
+                <div class="product-name">Suger free</div>
+                <div class="product-price">Rs 240</div>
+                <div class="product-offer-price">Offer Rs.200</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="d3.jpg" alt="Product 2">
+                <div class="product-name">Paste</div>
+                <div class="product-price">Rs 99</div>
+                <div class="product-offer-price">Offer Rs.80</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="d4.png" alt="Product 2">
+                <div class="product-name">Unibic</div>
+                <div class="product-price">Rs 40</div>
+                <div class="product-offer-price">Offer Rs.30</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <form id="lab-test" action="lab_test_form.php" method="POST">
+            <fieldset>
+                <legend>Patient Contact Details</legend>
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+
+                <label for="patient-id">Patient ID:</label>
+                <input type="text" id="patient-id" name="patient-id">
+
+                <label for="contact-number">Contact Number:</label>
+                <input type="text" id="contact-number" name="contact-number" required>
+
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Address</legend>
+                <label for="house-number">House Number:</label>
+                <input type="text" id="house-number" name="house-number" required>
+
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
+
+                <label for="area">Area:</label>
+                <input type="text" id="area" name="area" required>
+
+                <label for="district">District:</label>
+                <select id="district" name="district" required>
+                    <option value="">Choose</option>
+                    <option value="district1">District 1</option>
+                    <option value="district2">District 2</option>
+                    <option value="district3">District 3</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Choose the Test Type</legend>
+                <input type="checkbox" id="cbc" name="test-type" value="CBC">
+                <label for="cbc">CBC</label><br>
+                <input type="checkbox" id="complete-urine" name="test-type" value="Complete Urine">
+                <label for="complete-urine">Complete Urine</label><br>
+                <input type="checkbox" id="lipid-profile" name="test-type" value="Lipid Profile">
+                <label for="lipid-profile">Lipid Profile</label><br>
+                <input type="checkbox" id="tsh" name="test-type" value="Thyroid Stimulating Hormone(TSH)">
+                <label for="tsh">Thyroid Stimulating Hormone(TSH)</label><br>
+                <input type="checkbox" id="glucose-test" name="test-type" value="Glucose Test">
+                <label for="glucose-test">Glucose Test</label><br>
+                <span id="test-type-error" style="color: red;"></span>
+            </fieldset>
+
+            <fieldset>
+                <legend>Do you want a hard copy of the report also?</legend>
+                <input type="radio" id="yes" name="hard-copy" value="Yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="hard-copy" value="No">
+                <label for="no">No</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select Your Comfortable Date and Time</legend>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+            </fieldset>
+
+            <div>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>@copyright. Only for demonstration purposes</p>
+    </footer>
+
+    <script>
+        // JavaScript code for the Slideshow animation
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        // JavaScript code for the Test Type validation
+        var testTypeCheckbox = document.querySelectorAll('input[name="test-type"]');
+        var testTypeError = document.getElementById("test-type-error");
+
+        for (var i = 0; i < testTypeCheckbox.length; i++) {
+            testTypeCheckbox[i].addEventListener('change', function () {
+                testTypeError.textContent = "";
+            });
+        }
+
+        var labTestForm = document.getElementById("lab-test");
+        labTestForm.addEventListener("submit", function (event) {
+            var checkedTestTypes = Array.from(testTypeCheckbox).filter(function (checkbox) {
+                return checkbox.checked;
+            });
+
+            if (checkedTestTypes.length === 0) {
+                testTypeError.textContent = "Check at least one box without fail";
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
